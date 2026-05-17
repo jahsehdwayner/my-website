@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Things to Read</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg:       #FFFAF6;
+        --text:     #1A1A1A;
+        --heading:  #7B2D00;
+        --accent:   #005F73;
+        --tag-bg:   #E8F4F6;
+        --tag-text: #003D4C;
+        --border:   #C9B8AC;
+        --card-bg:  #FFF5EE;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 12px;
+        background-color: var(--accent);
+        color: white;
+        padding: 10px 14px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        left: 12px;
+      }
+
+      .navbar {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 12px;
+        margin-bottom: 32px;
+      }
+
+      .navbar a {
+        display: inline-block;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+        margin-right: 14px;
+        padding: 6px 8px;
+        border-radius: 4px;
+      }
+
+      .navbar a:hover,
+      .navbar a:focus,
+      .read-list a:hover,
+      .read-list a:focus {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+        background-color: white;
+      }
+
+      .site-header {
+        border-left: 5px solid var(--accent);
+        padding-left: 16px;
+        margin-bottom: 32px;
+      }
+
+      .tagline {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 6px;
+      }
+
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--heading);
+        line-height: 1.2;
+      }
+
+      .intro {
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: var(--text);
+        background-color: var(--card-bg);
+        border-left: 4px solid var(--heading);
+        padding: 18px 20px;
+        border-radius: 4px;
+        margin-bottom: 32px;
+      }
+
+      .read-list {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 20px 20px 20px 40px;
+      }
+
+      .read-list li {
+        margin-bottom: 12px;
+      }
+
+      .read-list a {
+        color: var(--accent);
+        font-weight: 700;
+        padding: 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="things-to-read.html">Things to Read</a>
+    </nav>
+
+    <main id="main-content">
+      <header class="site-header">
+        <p class="tagline">Links I like</p>
+        <h1>Things to Read</h1>
+      </header>
+
+      <p class="intro">
+        Here are some websites I like reading from. They are about food,
+        travel, culture, and technology.
+      </p>
+
+      <ol class="read-list">
+        <li><a href="https://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
+        <li><a href="https://www.bonappetit.com/" target="_blank">Bon Appétit</a></li>
+        <li><a href="https://www.foodnetwork.com/" target="_blank">Food Network</a></li>
+        <li><a href="https://www.allrecipes.com/" target="_blank">Allrecipes</a></li>
+        <li><a href="https://www.nationalgeographic.com/travel/" target="_blank">National Geographic Travel</a></li>
+        <li><a href="https://www.lonelyplanet.com/" target="_blank">Lonely Planet</a></li>
+        <li><a href="https://www.atlasobscura.com/" target="_blank">Atlas Obscura</a></li>
+        <li><a href="https://www.wired.com/" target="_blank">Wired</a></li>
+        <li><a href="https://www.theverge.com/" target="_blank">The Verge</a></li>
+        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+      </ol>
+    </main>
+
+  </body>
+</html>

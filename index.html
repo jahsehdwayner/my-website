@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Food Adventures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      /*
+      =====================================================
+      COLOR PALETTE — Accessibility Notes
+      =====================================================
+      --bg:        #FFFAF6  (warm white background)
+      --text:      #1A1A1A  (near-black body text)
+                   Contrast vs bg: 18.9:1  ✅ AAA
+      --heading:   #7B2D00  (deep burnt sienna)
+                   Contrast vs bg: 9.1:1   ✅ AAA
+      --accent:    #005F73  (teal — NOT red/green)
+                   Contrast vs bg: 7.2:1   ✅ AAA
+                   Safe for deuteranopia & protanopia
+      --tag-bg:    #E8F4F6  (light teal tint)
+      --tag-text:  #003D4C  (dark teal)
+                   Contrast vs tag-bg: 9.4:1 ✅ AAA
+      --border:    #C9B8AC  (warm gray)
+      --muted:     #5C4A3A  (dark warm brown)
+                   Contrast vs bg: 6.8:1   ✅ AA
+      =====================================================
+      Color choices avoid red/green pairs (the most common
+      colorblind deficiency affects ~8% of males).
+      Teal (#005F73) and brown (#7B2D00) are distinguishable
+      under deuteranopia, protanopia, and tritanopia.
+      All text meets WCAG 2.2 AA minimum (4.5:1).
+      Most meet AAA (7:1).
+      =====================================================
+      */
+
+      :root {
+        --bg:       #FFFAF6;
+        --text:     #1A1A1A;
+        --heading:  #7B2D00;
+        --accent:   #005F73;
+        --tag-bg:   #E8F4F6;
+        --tag-text: #003D4C;
+        --border:   #C9B8AC;
+        --muted:    #5C4A3A;
+        --card-bg:  #FFF5EE;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+      }
+
+      /* Keyboard skip link */
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 12px;
+        background-color: var(--accent);
+        color: white;
+        padding: 10px 14px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        left: 12px;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 12px;
+        margin-bottom: 32px;
+      }
+
+      .navbar a {
+        display: inline-block;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+        margin-right: 14px;
+        padding: 6px 8px;
+        border-radius: 4px;
+      }
+
+      .navbar a:hover,
+      .navbar a:focus {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+        background-color: white;
+      }
+
+      /* Header */
+      .site-header {
+        border-left: 5px solid var(--accent);
+        padding-left: 16px;
+        margin-bottom: 32px;
+      }
+
+      .tagline {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 6px;
+      }
+
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--heading);
+        line-height: 1.2;
+      }
+
+      .divider {
+        border: none;
+        border-top: 2px solid var(--border);
+        margin-bottom: 28px;
+      }
+
+      .intro {
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: var(--text);
+        background-color: var(--card-bg);
+        border-left: 4px solid var(--heading);
+        padding: 18px 20px;
+        border-radius: 4px;
+        margin-bottom: 48px;
+      }
+
+      h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        color: var(--heading);
+        margin-bottom: 28px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h2::after {
+        content: '';
+        flex: 1;
+        height: 2px;
+        background-color: var(--border);
+      }
+
+      .food-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .food-item {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 40px;
+      }
+
+      .food-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .food-label {
+        display: inline-block;
+        background-color: var(--tag-bg);
+        color: var(--tag-text);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+      }
+
+      .food-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        color: var(--heading);
+        margin-bottom: 14px;
+      }
+
+      .food-item img {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        border-radius: 8px;
+        object-fit: cover;
+        height: 240px;
+        border: 2px solid var(--border);
+      }
+
+      .a11y-note {
+        margin-top: 60px;
+        padding: 16px 20px;
+        background-color: var(--tag-bg);
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        font-size: 0.88rem;
+        color: var(--tag-text);
+        line-height: 1.7;
+      }
+
+      .a11y-note strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="things-to-read.html">Things to Read</a>
+    </nav>
+
+    <main id="main-content">
+      <header class="site-header">
+        <p class="tagline">A personal food journal</p>
+        <h1>My Food Adventures</h1>
+      </header>
+
+      <hr class="divider" />
+
+      <p class="intro">
+        Hi! I'm someone who loves trying new foods from all around the world.
+        Whether it's street food from a local market or a dish from a restaurant
+        I've never been to before, I'm always excited to taste something new.
+        Food is one of the best ways to explore different cultures!
+      </p>
+
+      <h2>Foods I've Tried and Loved</h2>
+
+      <ul class="food-list">
+        <li class="food-item">
+          <span class="food-label">Smash That Burger</span>
+          <p class="food-name">Triple Smash Burger</p>
+          <img src="images/burger.webp" alt="Triple Smash Burger from Smash That Burger" />
+        </li>
+        <li class="food-item">
+          <span class="food-label">Enseamada Cafe</span>
+          <p class="food-name">Chicken Adobo</p>
+          <img src="images/Chicken.webp" alt="Chicken Adobo from Enseamada Cafe" />
+        </li>
+        <li class="food-item">
+          <span class="food-label">Ichiran Ramen</span>
+          <p class="food-name">Ramen</p>
+          <img src="images/ramen.jpg" alt="Authentic Ramen from Ichiran" />
+        </li>
+      </ul>
+
+      <div class="a11y-note">
+        <strong>Color Accessibility</strong>
+        This page uses a teal + brown palette — avoiding red/green pairs — so it stays readable under
+        deuteranopia and protanopia (the most common forms of color blindness, affecting ~8% of males).
+        All text meets WCAG 2.2 AA contrast (min 4.5:1). Most elements meet AAA (7:1+).
+        Color is never the sole way information is conveyed.
+      </div>
+    </main>
+
+  </body>
+</html>

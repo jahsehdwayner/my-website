@@ -1,0 +1,79 @@
+Rios_Villicana_Josue_Sprint2
+
+Persona 1 – Tammy (Busy Student Buyer) Age: 20 Major: Business Year:
+Sophomore
+
+Interview Source: Interviewed UW Bothell student (April 2026)
+
+Bio: Tammy is a busy college student who often eats between classes. She
+prefers quick and affordable meals and doesn’t like wasting time waiting
+in long lines.
+
+Goals: - Get food quickly - Stay within budget - Easy ordering
+
+Frustrations: - Long wait times - Doesn’t know truck locations -
+Confusing menus
+
+Needs: - Clear menu display - Ability to order ahead - Location tracking
+
+Quote: “I hate waiting in long lines between classes.”
+
+Delighter: - Mobile order + fast pickup
+
+Persona 2 – Aidan (Efficiency-Focused Student) Age: 22 Major: Computer
+Science Year: Senior
+
+Interview Source: Interviewed UW Bothell student (April 2026)
+
+Bio: Aidan values efficiency and convenience. He often eats with friends
+and prefers using technology to make everything faster and easier.
+
+Goals: - Fast service - High-quality food - Easy payment
+
+Frustrations: - Slow service - No online ordering - Hard to split
+payments
+
+Needs: - Mobile ordering system - Digital payments - Order tracking
+
+Quote: “I wish I could just order ahead and pick it up.”
+
+Delighter: - Real-time order updates
+
+Persona 3 – Krissy (Social Experience Student) Age: 19 Major: Psychology
+Year: Freshman
+
+Interview Source: Interviewed UW Bothell student (April 2026)
+
+Bio: Krissy sees food trucks as a social experience. She enjoys trying
+new foods with friends and values variety and recommendations.
+
+Goals: - Try new foods - Have fun with friends - Find good deals
+
+Frustrations: - Hard to decide what to order - No reviews or ratings -
+Limited variety
+
+Needs: - Food photos - Reviews/ratings - Deals or discounts
+
+Quote: “I usually don’t know what to order, I just guess.”
+
+Delighter: - Trending items + student discounts
+
+Reflection
+
+To create my personas, I focused on common student behaviors such as
+convenience, cost, and social experience. I used simple interview-style
+questions to understand what students want, what frustrates them, and
+what would improve their experience. I determined the personas were
+“good enough” when each one clearly represented a different type of user
+with unique goals and pain points.
+
+The persona I am most proud of is Aidan because it clearly connects
+technology with user needs. His focus on efficiency and digital tools
+directly relates to how software solutions can improve the food truck
+experience.
+
+The most useful persona for the team would likely be Tammy. She
+represents a large group of customers who need fast and affordable food,
+making her highly relevant to business success. By solving her problems,
+such as long wait times and unclear information, the company can improve
+overall customer satisfaction and efficiency.
