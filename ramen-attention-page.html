@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Food Adventures</title>
+    <title>Ramen Around the World</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
     <style>
       :root {
@@ -118,22 +118,22 @@
         background-color: var(--border);
       }
 
-      .food-list {
+      .ramen-list {
         list-style: none;
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
-      .food-item {
+      .ramen-item {
         border-bottom: 1px solid var(--border);
         padding-bottom: 40px;
       }
-      .food-item:last-child {
+      .ramen-item:last-child {
         border-bottom: none;
         padding-bottom: 0;
       }
 
-      .food-label {
+      .ramen-label {
         display: inline-block;
         background-color: var(--tag-bg);
         color: var(--tag-text);
@@ -145,13 +145,22 @@
         border-radius: 20px;
         margin-bottom: 8px;
       }
-      .food-name {
+
+      .ramen-name {
         font-family: 'Playfair Display', serif;
         font-size: 1.3rem;
         color: var(--heading);
+        margin-bottom: 10px;
+      }
+
+      .ramen-desc {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--text);
         margin-bottom: 14px;
       }
-      .food-item img {
+
+      .ramen-item img {
         display: block;
         width: 100%;
         max-width: 480px;
@@ -161,9 +170,9 @@
         border: 2px solid var(--border);
       }
 
-      .a11y-note {
-        margin-top: 16px;
-        padding: 16px 20px;
+      .design-note {
+        margin-top: 48px;
+        padding: 18px 20px;
         background-color: var(--tag-bg);
         border: 1px solid var(--accent);
         border-radius: 6px;
@@ -171,18 +180,22 @@
         color: var(--tag-text);
         line-height: 1.7;
       }
-      .a11y-note:first-of-type { margin-top: 60px; }
-      .a11y-note strong {
+      .design-note strong {
         display: block;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
         font-size: 0.8rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
+      .design-note ul {
+        margin-left: 20px;
+      }
+      .design-note li {
+        margin-bottom: 6px;
+      }
     </style>
   </head>
   <body>
-
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <nav class="navbar" aria-label="Main navigation">
@@ -193,52 +206,71 @@
 
     <main id="main-content">
       <header class="site-header">
-        <p class="tagline">A personal food journal</p>
-        <h1>My Food Adventures</h1>
+        <p class="tagline">A ramen deep dive</p>
+        <h1>Ramen Around the World</h1>
       </header>
 
       <hr class="divider" />
 
+      <img src="images/rameneating.gif" alt="Animated gif of someone eating ramen" style="display:block; width:100%; max-width:480px; height:240px; object-fit:cover; border-radius:8px; border:2px solid var(--border); margin-bottom:28px;" />
+
       <p class="intro">
-        Hi! I'm someone who loves trying new foods from all around the world.
-        Whether it's street food from a local market or a dish from a restaurant
-        I've never been to before, I'm always excited to taste something new.
-        Food is one of the best ways to explore different cultures!
+        Ramen is one of my favorite foods. It started in Japan but has spread all over
+        the world, with each region adding its own twist. The broth, noodles, and
+        toppings all work together to make something that feels both simple and complex.
+        Here are three styles I love and want to try more of.
       </p>
 
-      <h2>Foods I've Tried and Loved</h2>
+      <h2>Three Styles I Love</h2>
 
-      <ul class="food-list">
-        <li class="food-item">
-          <span class="food-label">Smash That Burger</span>
-          <p class="food-name">Triple Smash Burger</p>
-          <img src="images/burger.webp" alt="Triple Smash Burger from Smash That Burger" />
+      <ul class="ramen-list">
+        <li class="ramen-item">
+          <span class="ramen-label">Rich Broth</span>
+          <p class="ramen-name">Tonkotsu Ramen</p>
+          <p class="ramen-desc">
+            Tonkotsu ramen comes from Fukuoka, Japan. The broth is made by boiling pork
+            bones for many hours until it turns thick, creamy, and white. It has a deep,
+            rich flavor that feels very filling and warm. It is usually topped with chashu
+            pork, a soft-boiled egg, green onions, and nori. This is one of the most
+            popular styles of ramen in Japan and around the world.
+          </p>
+          <img src="images/tonkatsu-Ramen.jpg" alt="Tonkotsu ramen with creamy white broth and sliced pork" />
         </li>
-        <li class="food-item">
-          <span class="food-label">Enseamada Cafe</span>
-          <p class="food-name">Chicken Adobo</p>
-          <img src="images/Chicken.webp" alt="Chicken Adobo from Enseamada Cafe" />
+        <li class="ramen-item">
+          <span class="ramen-label">Classic Flavor</span>
+          <p class="ramen-name">Shoyu Ramen</p>
+          <p class="ramen-desc">
+            Shoyu means soy sauce in Japanese, and that is the base of this broth. It is
+            usually a clear, brown, chicken or pork broth seasoned with soy sauce. The
+            flavor is lighter than tonkotsu but still very savory and satisfying. It is
+            one of the oldest styles of ramen and is often topped with bamboo shoots,
+            green onions, fish cake, and a soft-boiled egg. I like it because it does
+            not feel too heavy.
+          </p>
+          <img src="images/shoyu-ramen.png" alt="Shoyu ramen with soy sauce broth, egg, and green onions" />
         </li>
-        <li class="food-item">
-          <span class="food-label">Ichiran Ramen</span>
-          <p class="food-name">Ramen</p>
-          <img src="images/ramen.jpg" alt="Authentic Ramen from Ichiran" />
+        <li class="ramen-item">
+          <span class="ramen-label">Savory Taste</span>
+          <p class="ramen-name">Miso Ramen</p>
+          <p class="ramen-desc">
+            Miso ramen is from Hokkaido, the northernmost island of Japan, where winters
+            are very cold. The broth is made with miso paste, which gives it a deep,
+            salty, and slightly earthy flavor. It pairs really well with corn, butter,
+            and bean sprouts as toppings. The thick broth keeps you warm and is perfect
+            for cold weather. It is my favorite style to try during fall and winter.
+          </p>
+          <img src="images/miso-ramen.jpg" alt="Miso ramen with corn, egg, noodles, and vegetables" />
         </li>
       </ul>
 
-      <div class="a11y-note">
-        <strong>Keyboard Access</strong>
-        This website can be used with a keyboard. Press the Tab key to move through
-        the navigation links and page links. Press Enter to open the selected link.
-        A visible outline appears around links when they are focused, so users can
-        tell where they are on the page.
-      </div>
-
-      <div class="a11y-note">
-        <strong>Color Accessibility</strong>
-        This page uses a teal + brown palette — avoiding red/green pairs — so it stays readable under
-        deuteranopia and protanopia (the most common forms of color blindness, affecting ~8% of males).
-        All text meets WCAG 2.2 AA contrast (min 4.5:1). Most elements meet AAA (7:1+).
+      <div class="design-note">
+        <strong>How This Page Guides Attention</strong>
+        <ul>
+          <li><strong>Reading order:</strong> The page moves top to bottom, matching how most people naturally scan.</li>
+          <li><strong>Proximity:</strong> Each photo, label, name, and description are grouped together so they feel like one item.</li>
+          <li><strong>Similarity:</strong> All three ramen entries use the same layout, making the page easy to scan.</li>
+          <li><strong>Hierarchy:</strong> The large title comes first, then the intro, then the individual ramen entries.</li>
+        </ul>
       </div>
     </main>
 
